@@ -1,0 +1,123 @@
+<!-- <div style="width:300px;margin:auto">
+
+  <h2>Register</h2>
+
+  <form (ngSubmit)="register()">
+
+    <input
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      placeholder="Username"
+      required
+    >
+
+    <br><br>
+
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      placeholder="Password"
+      required
+    >
+
+    <br><br>
+
+    <select
+      name="role"
+      [(ngModel)]="role"
+    >
+
+      <option value="User">
+        User
+      </option>
+
+      <option value="Admin">
+        Admin
+      </option>
+
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+      Register
+    </button>
+
+  </form>
+
+</div> -->
+<mat-card class="login-card">
+
+  <h2>Register</h2>
+
+  <form (ngSubmit)="register()">
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Username</mat-label>
+
+      <input
+        matInput
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Password</mat-label>
+
+      <input
+        matInput
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Role</mat-label>
+
+      <mat-select
+        name="role"
+        [(ngModel)]="role"
+      >
+
+        <mat-option value="User">
+          User
+        </mat-option>
+
+        <mat-option value="Admin">
+          Admin
+        </mat-option>
+
+      </mat-select>
+
+    </mat-form-field>
+
+    <br>
+
+    <button
+      mat-raised-button
+      color="primary"
+      class="full-width"
+      type="submit"
+    >
+      Register
+    </button>
+
+  </form>
+
+</mat-card>

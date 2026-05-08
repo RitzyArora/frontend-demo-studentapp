@@ -1,0 +1,144 @@
+<!-- <div
+    style="
+      border:1px solid gray;
+      padding:20px;
+      margin-bottom:20px;
+    "
+  >
+
+    <h2>
+
+      {{ editMode ? 'Edit Student' : 'Add Student' }}
+
+    </h2>
+
+    <form (ngSubmit)="saveStudent()">
+
+      <input
+        type="text"
+        placeholder="Student Name"
+        [(ngModel)]="student.studentName"
+        name="studentName"
+        required
+      >
+
+      <br><br>
+
+      <input
+        type="number"
+        placeholder="Student Age"
+        [(ngModel)]="student.studentAge"
+        name="studentAge"
+        required
+      >
+
+      <br><br>
+
+      <input
+        type="number"
+        placeholder="Student Marks"
+        [(ngModel)]="student.studentMarks"
+        name="studentMarks"
+        required
+      >
+
+      <br><br>
+
+      <button type="submit">
+
+        {{ editMode ? 'Update' : 'Save' }}
+
+      </button>
+
+      <button
+        type="button"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+
+    </form>
+
+  </div> -->
+  <mat-card style="padding:20px; margin-bottom:20px;">
+
+  <h2>
+
+    {{ editMode ? 'Edit Student' : 'Add Student' }}
+
+  </h2>
+
+  <form (ngSubmit)="saveStudent()">
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Student Name</mat-label>
+
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="student.studentName"
+        name="studentName"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Student Age</mat-label>
+
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="student.studentAge"
+        name="studentAge"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Student Marks</mat-label>
+
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="student.studentMarks"
+        name="studentMarks"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+    >
+
+      {{ editMode ? 'Update' : 'Save' }}
+
+    </button>
+
+    &nbsp;
+
+    <button
+      mat-raised-button
+      color="warn"
+      type="button"
+      (click)="cancel()"
+    >
+      Cancel
+    </button>
+
+  </form>
+
+</mat-card>

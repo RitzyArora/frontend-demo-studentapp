@@ -1,0 +1,92 @@
+ <!-- <div style="width:300px;margin:auto">
+
+    <h2>Login</h2>
+    <br>
+
+<a routerLink="/register">
+  Create Account
+</a>
+
+    <form (ngSubmit)="login()">
+
+      <input
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Username"
+        required
+      >
+
+      <br><br>
+
+      <input
+        [(ngModel)]="password"
+        name="password"
+        type="password"
+        placeholder="Password"
+        required
+      >
+
+      <br><br>
+
+      <button type="submit">
+        Login
+      </button>
+
+    </form>
+
+  </div> -->
+  <mat-card class="login-card">
+
+  <h2>Login</h2>
+
+  <a routerLink="/register">
+    Create Account
+  </a>
+
+  <br><br>
+
+  <form (ngSubmit)="login()">
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Username</mat-label>
+
+      <input
+        matInput
+        [(ngModel)]="username"
+        name="username"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="outline" class="full-width">
+
+      <mat-label>Password</mat-label>
+
+      <input
+        matInput
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      >
+
+    </mat-form-field>
+
+    <br>
+
+    <button
+      mat-raised-button
+      color="primary"
+      class="full-width"
+      type="submit"
+    >
+      Login
+    </button>
+
+  </form>
+
+</mat-card>
