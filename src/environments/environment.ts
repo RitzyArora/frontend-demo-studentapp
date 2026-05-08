@@ -1,4 +1,4 @@
 export const environment={
 
-    api:'backend-demo-studentapp-production.up.railway.app/api'
+    api:'https://backend-demo-studentapp-production.up.railway.app/api'
 }
